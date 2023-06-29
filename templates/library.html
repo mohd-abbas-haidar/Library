@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Secret Of Bezos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        {% comment %} <h1>Bezos's Secret</h1>
+        <h3>Nerd Today Boss Tommorrow</h3> {% endcomment %}
+        {% comment %} {% for i in book %}
+            <p>{{i.title}}</p>
+            <p><a href=media/{{i.pdf}}>aaa</a></p>
+            
+            
+        {% endfor %} {% endcomment %}
+        
+        {% comment %} <p>{{i.title}}</p>
+        <p><img src="{{i.thumbnail.url}}"> </p>
+        <p><a href=media/{{i.pdf}}>Click here</a></p> {% endcomment %}
+        {% comment %} <iframe src="{{i.link}}" title="description"></iframe> {% endcomment %}
+        <!-- Bootstrap Static Header -->
+<div style="background: url(http://officechai.com/wp-content/uploads/2018/09/amazon-first-office-1024x538.jpg)" class="jumbotron bg-cover text-white">
+  <div class="container py-5 text-center">
+      <h1 class="display-4 font-weight-bold">Bezos' Secret</h1>
+      <p class="font-italic mb-0">" How big would you dream if you knew you couldn't fail? "</p>
+      {% comment %} <p class="font-italic">Snippe by
+          <a href="https://bootstrapious.com" class="text-white">
+              <u>Bootstrapious</u>
+          </a>
+      </p> {% endcomment %}
+      {% comment %} <a href="#" role="button" class="btn btn-primary px-5">See All Features</a> {% endcomment %}
+  </div>
+</div>
+
+<!-- For Demo Purpose -->
+<div class="container py-5">
+  <h1 class="h3 font-weight-bold">“What Matters More Than Your Talents”</h1>
+  <p class="font-italic text-muted"><i>delivered by  </i><b> JEFF BEZOS </b></p>
+  <div class="row">
+      <div class="col-lg-10 mb-4">
+          <p class="font-italic text-muted">How will you use these gifts? And will you take pride in your gifts or pride in your choices?</p>
+
+            <p>I got the idea to start Amazon 16 years ago. I came across the fact that Web usage was growing at 2,300 percent per year. I’d never seen or heard of anything that grew that fast, and the idea of building an online bookstore with millions of titles — something that simply couldn’t exist in the physical world — was very exciting to me. I had just turned 30 years old, and I’d been married for a year. I told my wife MacKenzie that I wanted to quit my job and go do this crazy thing that probably wouldn’t work since most startups don’t, and I wasn’t sure what would happen after that. MacKenzie (also a Princeton grad and sitting here in the second row) told me I should go for it. As a young boy, I’d been a garage inventor. I’d invented an automatic gate closer out of cement-filled tires, a solar cooker that didn’t work very well out of an umbrella and tinfoil, baking-pan alarms to entrap my siblings. I’d always wanted to be an inventor, and she wanted me to follow my passion.</p>
+            
+            I was working at a financial firm in New York City with a bunch of very smart people, and I had a brilliant boss that I much admired. I went to my boss and told him I wanted to start a company selling books on the Internet. He took me on a long walk in Central Park, listened carefully to me, and finally said, “That sounds like a really good idea, but it would be an even better idea for someone who didn’t already have a good job.” That logic made some sense to me, and he convinced me to think about it for 48 hours before making a final decision. Seen in that light, it really was a difficult choice, but ultimately, I decided I had to give it a shot. I didn’t think I’d regret trying and failing. And I suspected I would always be haunted by a decision to not try at all. After much consideration, I took the less safe path to follow my passion, and I’m proud of that choice.</p>
+          {% comment %} <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p> {% endcomment %}
+      </div>
+      {% comment %} <div class="col-lg-8">
+          <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur <strong class="font-weight-bold text-dark">adipisicing elit, sed </strong>do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <strong class="font-weight-bold text-dark">reprehenderit in voluptate </strong>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div> {% endcomment %}
+  </div>
+</div>
+        <ul class="cards">
+          {% for i in book %}
+            <li>
+              <a href="{{i.link}}" class="card"  target="_blank">
+                <img src="{{i.thumbnail.url}}" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="{{i.thumbnail.url}}" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">{{i.title}}</h3>            
+                      <span class="card__status">{{i.author}}</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Start Reading</p>
+                </div>
+              </a>      
+            </li>
+            {% comment %} <li>
+              <a href="" class="card">
+                <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+                <div class="card__overlay">        
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">kim Cattrall</h3>
+                      <span class="card__status">3 hours ago</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="card">
+                <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Jessica Parker</h3>
+                      <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>            
+                      <span class="card__status">1 hour ago</span>
+                    </div>
+                  </div>
+                  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="card">
+                <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                    <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">kim Cattrall</h3>
+                      <span class="card__status">3 hours ago</span>
+                    </div>          
+                  </div>
+                  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+                </div>
+              </a>
+            </li>     {% endcomment %}
+            {% endfor %}
+          </ul>
+        
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
